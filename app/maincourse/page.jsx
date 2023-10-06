@@ -75,7 +75,7 @@ ${checkActive(item.id,"active")}`
             ))};*/}
         {Menu.map((item) => (
             <div className = {`${item.id==activeindex ? 'visible': 'hidden' }`}>
-            <img
+            <Image
               src={item.src}
               alt=""
               className="w-full h-[450px] object-fit border-solid border-2 pb-2"
