@@ -3,7 +3,9 @@ import React from 'react'
 const About = () => {
   return (
     <div>
-        About
+      <center>
+        Food archive
+      </center>
     </div>
   )
 }
