@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from '';
+import Image from 'next/image';
 
 const Popup = () => {
   return (

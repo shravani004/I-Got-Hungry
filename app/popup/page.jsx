@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './../components/Form';
+import Image from 'next/image';
 
 const page = () => {
   return (
