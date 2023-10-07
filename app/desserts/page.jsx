@@ -1,5 +1,6 @@
 'use client'
 import { useState } from "react";
+import Image from 'next/image';
 
 const Menu = [
   {
@@ -77,6 +78,8 @@ ${checkActive(item.id,"active")}`
             <Image
               src={item.src}
               alt=""
+              width={300}
+              height={400}
               className="w-full h-[450px] object-fit border-solid border-2 pb-2"
             />
             {item.content}

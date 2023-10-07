@@ -58,7 +58,7 @@ const Form = () => {
         </div>
         <div className="mt-8 grid grid-cols-2 justify-between items-center gap-2">
           <div>
-            <input type="checkbox" id="remember" />
+            <input type="checkbox" className="remember" />
             <label className="ml-2 font-medium text-base" for="remember">
               {" "}
               Remember for 30 days{" "}
@@ -69,13 +69,13 @@ const Form = () => {
           </button>
         </div>
         <div className="mt-8 flex flex-col gap-y-4">
-            <button
-              type="submit"
-              className="active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 rounded-xl bg-red-400 text-white text-lg font-bold"
-            >
-              Sign in
-            </button>
-          
+          <button
+            type="submit"
+            className="active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 rounded-xl bg-red-400 text-white text-lg font-bold"
+          >
+            Sign in
+          </button>
+
           <button className="flex py-3 rounded-xl border-2 border-gray-100 items-center justify-center gap-2 active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all">
             <svg
               width="24"
@@ -106,7 +106,10 @@ const Form = () => {
         </div>
         <div className="mt-8 flex justify-center items-center">
           <p className="font-medium text-base">Don't have an account?</p>
-          <Link href="/signup" className="text-red-600 text-base font-medium ml-2">
+          <Link
+            href="/signup"
+            className="text-red-600 text-base font-medium ml-2"
+          >
             Sign up
           </Link>
         </div>

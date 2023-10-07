@@ -79,7 +79,9 @@ ${checkActive(item.id,"active")}`
             <Image
               src={item.src}
               alt=""
-              className="w-full h-[450px] object-fit border-solid border-2 pb-2"
+              width={300}
+              height={400}
+              className="w-full h-[450px] object-cover border-solid border-2 pb-2"
             />
             {item.content}
           </div>

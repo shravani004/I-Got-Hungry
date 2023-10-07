@@ -4,7 +4,8 @@ const About = () => {
   return (
     <div>
       <center>
-        Food archive
+        Food archive <br />
+        All rights reserved
       </center>
     </div>
   )

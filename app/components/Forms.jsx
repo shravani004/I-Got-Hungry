@@ -56,9 +56,9 @@ const Form = () => {
             )}
           </form>
         </div>
-        <div className="mt-8 flex justify-between items-center">
+        <div className="mt-8 grid grid-cols-2 justify-between items-center gap-2">
           <div>
-            <input type="checkbox" id="remember" />
+            <input type="checkbox" className="remember" />
             <label className="ml-2 font-medium text-base" for="remember">
               {" "}
               Remember for 30 days{" "}
