@@ -5,7 +5,7 @@ import Image from 'next/image';
 const page = () => {
   return (
     <div className="flex w-full h-screen">
-      <div className="w-full flex items-center justify-center lg:w-1/2">
+      <div className="w-full flex items-center justify-center lg:w-1/2 text-gray-700">
         <Form />
       </div>
       <div className="hidden relative lg:flex h-full w-1/2 items-center justify-center bg-gray-200">

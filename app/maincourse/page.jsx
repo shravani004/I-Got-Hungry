@@ -55,14 +55,14 @@ export default function Tabdinner() {
       <Nav />
       <main className="bg-gray-100 md:col-span-5 max-h-max">
         {/*Tab List*/}
-        <div className="bg-gray-100 flex justify-between items-center space-x-8 rounded-md p-4 w-full text-sm md:text-xl uppercase border-b border-gray-100">
+        <div className="bg-gray-100 flex justify-between items-center space-x-8 rounded-md p-4 w-full text-sm md:text-xl uppercase border-b">
           {Menu.map((item) => (
             <div key={item.id}>
               <button
                 onClick={() => handleClick(item.id)}
                 className={`${checkActive(
                   item.id,
-                  "bg-gray-100 px-2 py-0 rounded-md text-gray-700 border-gray-100 border-b hover:text-gray-700"
+                  "bg-gray-100 px-2 py-0 rounded-md text-gray-700 font-bold"
                 )}`}
               >
                 {item.title}

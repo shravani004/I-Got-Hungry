@@ -25,7 +25,7 @@ const Form = () => {
     <div className="bg-white px-10 py-20 rounded-3xl border-2 border-gray-200">
       <h1 className="text-5xl font-semibold ">I Got Hungry</h1>
       <p className="font-medium text-lg text-gray-500 mt-4">
-        Welcome! Sign up for food
+        Welcome! Sign up for some delicious recipes!
       </p>
       <div className="mt-8">
         <div>
