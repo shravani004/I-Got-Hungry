@@ -7,7 +7,7 @@ const Nav = () => {
     const [show, setShow] = useState(false)
 
     return (
-        <div class="md:col-span-1 md:flex md:justify-end">
+        <div class="md:col-span-1 md:flex md:justify-end bg-white">
             <nav class="text-right font-nuni">
             <div class="flex justify-between items-center">
                 <h1 class="font-bold uppercase p-4 border-b border-gray-100">

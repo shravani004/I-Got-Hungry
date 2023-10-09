@@ -105,7 +105,7 @@ const Form = () => {
           </button>
         </div>
         <div className="mt-8 flex justify-center items-center">
-          <p className="font-medium text-base">Don't have an account?</p>
+          <p className="font-medium text-base">Don&apos;t have an account?</p>
           <Link
             href="/signup"
             className="text-red-600 text-base font-medium ml-2"
