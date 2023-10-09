@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import Image from 'next/image';
+import Nav from '@/app/components/Nav';
 
 const Menu = [
   {
@@ -49,43 +50,65 @@ export default function Tab() {
     activeindex === index ? className : "";
 
   return (
-    <div className="flex flex-col space-y-4">
-      <div className="bg-white flex justify-between items-center space-x-8 rounded-md px-4 py-2 w-full">
-        {/*Tab List*/}
-        {Menu.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => handleClick(item.id)}
-            className={`${checkActive(
-              item.id,
-              "bg-white px-2 py-1 rounded-md text-indigo-600"
-            )}`}
-          >
-            {item.title}
-          </button>
-        ))}
-      </div>
-      <div className="bg-white w-full rounded-md shadow-lg text-lg p-8 text-justify">
-        {/*Tab Panel*/}
-        {/*{Menu.map((item) => (
-                <div key={item.id} className={`
-${item.color} p-2 panel 
-${checkActive(item.id,"active")}`
-}>{item.content}</div>
-            ))};*/}
-        {Menu.map((item) => (
-            <div className = {`${item.id==activeindex ? 'visible': 'hidden' }`}>
-            <Image
-              src={item.src}
-              alt=""
-              width={300}
-              height={400}
-              className="w-full h-[450px] object-fit border-solid border-2 pb-2"
-            />
-            {item.content}
-          </div>
-        ))}
-      </div>
+    <div className="grid md:grid-cols-6 h-full">
+      <Nav />
+      <main className="bg-gray-100 md:col-span-5 max-h-max">
+        <div className="bg-gray-100 flex justify-between items-center space-x-8 rounded-md p-4 w-full text-sm md:text-xl uppercase border-b border-gray-100">
+          {Menu.map((item) => (
+            <div key={item.id}>
+              <button
+                onClick={() => handleClick(item.id)}
+                className={`${checkActive(
+                  item.id,
+                  "bg-gray-100 px-2 py-0 rounded-md text-gray-700 border-gray-100 border-b hover:text-gray-700"
+                )}`}
+              >
+                {item.title}
+              </button>
+            </div>
+          ))}
+        </div>
+        <header className="bg-gray-100 px-16 py-6">
+          {Menu.map((item) => (
+            <h2
+              key={item.id}
+              className={`${item.id == activeindex ? "visible" : "hidden"} text-gray-700 text-6xl font-semibold`}
+            >
+              {item.title}
+            </h2>
+          ))}
+          <h3 class="text-2xl font-semibold"> Food archive </h3>
+        </header>
+        <div className="px-16 py-6 bg-gray-100 w-full rounded-md shadow-lg text-lg text-justify">
+          {/*Tab Panel*/}
+          {Menu.map((item) => (
+            <div
+              key={item.id}
+              className={`
+    ${item.color} panel
+    ${checkActive(item.id, "active")}`}
+            >
+              {item.content}
+            </div>
+          ))}
+          {Menu.map((item) => (
+            <div key={item.id} className={`${item.id == activeindex ? "visible" : "hidden"}`}>
+              <div className="w-800 h-1000">
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  width={720}
+                  height={1280}
+                  // fill
+                  // priority
+                  className="object-fit pb-10"
+                />
+              </div>
+              {item.content}
+            </div>
+          ))}
+        </div>
+    </main>
     </div>
   );
 }
